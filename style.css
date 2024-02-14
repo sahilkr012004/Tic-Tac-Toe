@@ -12,6 +12,8 @@
     align-items: center;
     gap: 5rem;
     margin: auto;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .btn {
@@ -80,4 +82,19 @@
     font-variation-settings:
         "BLED" 0,
         "SCAN" -41;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        gap: 1rem;
+    }
+    .box {
+        height: 100px;
+        width: 100px;
+    }
+    .winnerboard {
+        width: 200px;
+        padding: 1rem;
+        font-size: 25px;
+    }
 }
