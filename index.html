@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="game-zone">
+            <div class="row">
+                <div id="cell1" class="box"></div>
+                <div id="cell2" class="box"></div>
+                <div id="cell3" class="box"></div>
+            </div>
+            <div class="row">
+                <div id="cell4" class="box"></div>
+                <div id="cell5" class="box"></div>
+                <div id="cell6" class="box"></div>
+            </div>
+            <div class="row">
+                <div id="cell7" class="box"></div>
+                <div id="cell8" class="box"></div>
+                <div id="cell9" class="box"></div>
+            </div>
+        </div>
+
+        <div class="options">
+            <div class="winnerboard"></div>
+            <h1 class="notification">Player 1 Turn</h1>
+            <button class="btn" onclick="location.reload()">Restart</button>
+            <div class="inputfromuser">
+                <label for="Player1">Player1</label>
+                <input type="text" id="player1-sign" placeholder="X"><br>
+                <label for="Player2">Player2</label>
+                <input type="text" id="player2-sign" placeholder="O">
+                <button class="btn" id="player-data-submit">New Value</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

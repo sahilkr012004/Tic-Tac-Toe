@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+
+.container {
+    max-width: 1100px;
+    background: black;
+    color: white;
+    /* background: rgb(241, 241, 203); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: auto;
+}
+
+.btn {
+    width: 6rem;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.game-zone {
+    padding: 2rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputfromuser {
+    background-color: bisque;
+    padding: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: black;
+
+}
+
+#player-data-submit {
+    margin-top: 9px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    border: 5px solid white;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+.row {
+    display: flex;
+}
+
+.winnerboard {
+    background-color: blue;
+    color: white;
+    height: auto;
+    width: 300px;
+    font-size: 40px;
+    text-align: center;
+    padding: 2rem;
+    border: 5px dotted white;
+
+    /* Font-style */
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" -41;
+}
