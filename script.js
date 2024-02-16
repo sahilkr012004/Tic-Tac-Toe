@@ -14,9 +14,13 @@ document.querySelector("#player-data-submit").addEventListener("click", () => {
 )
 
 
+var b = 0;
+
+
 //Handling Player Turn
 const changeTurn = () => {
-    if (turn == player1_opt) {
+      if(b == 0){
+       if (turn == player1_opt) {
         notification.innerHTML = `${player2_opt} Turn`
         return turn = player2_opt
     }
@@ -24,6 +28,19 @@ const changeTurn = () => {
         notification.innerHTML = `${player1_opt} Turn`
         return turn = player1_opt
     }
+
+    }
+
+    else{
+          notification.innerHTML = "Play again";
+
+
+    }
+
+
+
+
+
 }
 
 let boxesfilled = 0;
@@ -32,13 +49,13 @@ let boxesfilled = 0;
 let boxElements = document.querySelectorAll(".box")
 boxElements.forEach(boxelement => {
     boxelement.addEventListener("click", () => {
-        if (boxelement.innerHTML == '') {
+        if (boxelement.innerHTML == '' && b == 0) {
             clickAudio.play();
-            boxelement.innerHTML = turn
-            boxesfilled += 1
-            checkwin()
-            checkdraw()
-            changeTurn()
+            boxelement.innerHTML = turn;
+            boxesfilled += 1;
+            checkwin();
+            checkdraw();
+            changeTurn();
         }
     }
     )
@@ -47,6 +64,7 @@ boxElements.forEach(boxelement => {
 
 //Checking Winner
 function checkwin() {
+    if(b == 0){
     let wins = [
         [0, 1, 2],
         [3, 4, 5],
@@ -61,15 +79,46 @@ function checkwin() {
         if (boxElements[e[0]].innerHTML != '' && boxElements[e[0]].innerHTML == boxElements[e[1]].innerHTML && boxElements[e[1]].innerHTML == boxElements[e[2]].innerHTML) {
             document.querySelector(".winnerboard").innerHTML = (`${boxElements[e[0]].innerHTML} won`).toUpperCase()
             winAudio.play()
+
+            b = 1;
+
+
+
         }
-    })
+    })}
 
 }
 
 //Check Draw
 function checkdraw() {
-    if (boxesfilled == 9) {
-        document.querySelector(".winnerboard").innerHTML = ("draw").toUpperCase()
-        winAudio.play()
+      if(b == 0){
+          if (boxesfilled == 9) {
+
+         checkwin();
+         if(b == 0){
+         document.querySelector(".winnerboard").innerHTML = ("draw").toUpperCase()
+         winAudio.play()
+         b = 1;
+         }
+
+         else{
+               b = 1;
+
+
+         }
+
+
     }
+
+
+
+
+      }
+
+
+
+
+
+
 }
+
